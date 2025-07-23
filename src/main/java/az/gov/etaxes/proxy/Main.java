@@ -12,5 +12,11 @@ public class Main {
 
     email.send();
     sms.send();
+
+    Employee e1 = new Employee();
+    System.out.println("Employee maaşı: " + e1.calculateSalary());
+
+    Employee e2 = new Manager();
+    System.out.println("Manager maaşı: " + e2.calculateSalary());
   }
   }
