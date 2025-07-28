@@ -30,6 +30,8 @@ public class Main {
     System.out.println("Maas: " + teacher.getSalary());
 
     Manager manager = new Manager();
+     Dog d= new Dog();
+     d.makeSound();
 
   }
   }
