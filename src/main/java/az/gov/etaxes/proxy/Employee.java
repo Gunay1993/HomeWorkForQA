@@ -6,4 +6,8 @@ public class Employee {
     return 1000;
   }
 
+  public  Employee(){
+    System.out.println("Employee yaradıldı");
+  }
+
 }

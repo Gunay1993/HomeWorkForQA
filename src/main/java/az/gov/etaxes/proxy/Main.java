@@ -29,5 +29,7 @@ public class Main {
     System.out.println( teacher.getName() + " " + teacher.getSurname());
     System.out.println("Maas: " + teacher.getSalary());
 
+    Manager manager = new Manager();
+
   }
   }
