@@ -18,5 +18,16 @@ public class Main {
 
     Employee e2 = new Manager();
     System.out.println("Manager maaşı: " + e2.calculateSalary());
+
+    Vehicle v1=new Car();
+    v1.start();
+
+    Teacher teacher = new Teacher();
+    teacher.setName("Gunay");
+    teacher.setSurname("Abbasova");
+    teacher.setSalary(250);
+    System.out.println( teacher.getName() + " " + teacher.getSurname());
+    System.out.println("Maas: " + teacher.getSalary());
+
   }
   }
