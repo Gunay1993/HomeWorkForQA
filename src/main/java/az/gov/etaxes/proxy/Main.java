@@ -32,6 +32,9 @@ public class Main {
     Manager manager = new Manager();
      Dog d= new Dog();
      d.makeSound();
+    SavingsAccount acc = new SavingsAccount();
+    acc.setBalance(1000);
+    System.out.println("Faiz: " + acc.calculateInterest());
 
   }
   }
