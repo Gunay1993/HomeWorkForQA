@@ -38,5 +38,7 @@ public class Main {
     Students s =new Students();
     double ortabal=s.ortaBalHesabla();
     System.out.println("Telebenin ortalama bali: "+ortabal);
+    Yemekler y = new Yemekler();
+    y.yemekCesidleri();
     }
   }
