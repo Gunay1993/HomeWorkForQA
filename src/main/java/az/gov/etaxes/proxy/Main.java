@@ -35,6 +35,8 @@ public class Main {
     SavingsAccount acc = new SavingsAccount();
     acc.setBalance(1000);
     System.out.println("Faiz: " + acc.calculateInterest());
-
-  }
+    Students s =new Students();
+    double ortabal=s.ortaBalHesabla();
+    System.out.println("Telebenin ortalama bali: "+ortabal);
+    }
   }
