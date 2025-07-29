@@ -42,6 +42,7 @@ public class Main {
     y.yemekCesidleri();
     Stok st =new Stok();
     st.stokStatus();
+    st.kontakNumber();
 
     }
   }
