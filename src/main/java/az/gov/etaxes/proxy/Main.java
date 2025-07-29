@@ -56,5 +56,15 @@ public class Main {
     }catch (Exception e){
       System.out.println("Fayl tapılmadı!");
     }
+
+    PaymentType userPayment;
+     userPayment = PaymentType.CARD;
+
+    if (userPayment == PaymentType.TRANSFER) {
+      System.out.println("Ödəniş gecikə bilər");
+    }else {
+      System.out.println("Ödəniş qəbul edildi");
+    }
+    }
   }
-  }
+
