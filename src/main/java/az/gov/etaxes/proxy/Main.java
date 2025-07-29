@@ -49,5 +49,12 @@ public class Main {
     }catch (Exception e){
       System.out.println("Yalnız rəqəm daxil olunmalıdır");
     }
+
+    try {
+      String[] faylName = {"report.txt", "invoice.pdf", "summary.doc"};
+      System.out.println("fayl" + faylName[10]);
+    }catch (Exception e){
+      System.out.println("Fayl tapılmadı!");
+    }
   }
   }
