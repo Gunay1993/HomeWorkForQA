@@ -65,6 +65,21 @@ public class Main {
     }else {
       System.out.println("Ödəniş qəbul edildi");
     }
+
+    Degree degree;
+    degree=Degree.MASTER;
+   switch (degree){
+     case BACHELOR:
+       System.out.println("İlk ali təhsil");
+      case MASTER:
+        System.out.println("İxtisaslaşdırılmış təhsil");
+      break;
+      case DOCTORATE:
+        System.out.println("Elmi səviyyə");
+          break;
+      default:
+        System.out.println("Yanlis melumat");
+    }
     }
   }
 
