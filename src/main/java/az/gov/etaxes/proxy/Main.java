@@ -40,5 +40,8 @@ public class Main {
     System.out.println("Telebenin ortalama bali: "+ortabal);
     Yemekler y = new Yemekler();
     y.yemekCesidleri();
+    Stok st =new Stok();
+    st.stokStatus();
+
     }
   }
