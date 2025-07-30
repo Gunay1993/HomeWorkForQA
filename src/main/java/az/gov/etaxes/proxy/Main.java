@@ -1,5 +1,7 @@
 package az.gov.etaxes.proxy;
 
+import java.util.HashMap;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -82,7 +84,17 @@ public class Main {
 */
         Tapsiriq_9 t =new Tapsiriq_9();
         t.bolme();
-   }
+
+
+    HashMap<String,BookType  > a=new HashMap<>();
+    a.put("Ulduzlu Gecələr", BookType.NOVEL);
+    a.put("Qədim Tarix", BookType.HISTORY);
+    a.put("Fizika 101", BookType.SCIENCE);
+
+    for (String kitabAdi : a.keySet()) {
+      System.out.println(kitabAdi + "  " + a.get(kitabAdi));
+    }
+  }
     }
 
 
