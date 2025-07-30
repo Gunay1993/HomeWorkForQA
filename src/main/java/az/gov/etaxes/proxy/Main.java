@@ -3,7 +3,7 @@ package az.gov.etaxes.proxy;
 public class Main {
 
   public static void main(String[] args) {
-    Vehicle v = new Bicycle();
+   /* Vehicle v = new Bicycle();
     v.move();
 
     MessageSender email = new EmailSender();
@@ -79,7 +79,10 @@ public class Main {
           break;
       default:
         System.out.println("Yanlis melumat");
+*/
+        Tapsiriq_9 t =new Tapsiriq_9();
+        t.bolme();
+   }
     }
-    }
-  }
+
 
