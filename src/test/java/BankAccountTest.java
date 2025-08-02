@@ -4,8 +4,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -61,6 +64,30 @@ assertEquals(150, account.getBalance());
   public  void depositCheck(double amount){
     account.deposit(amount);
     assertEquals(amount, account.getBalance());
+  }
+
+  @ParameterizedTest
+  @CsvSource({
+      "200.0, 50.0, 150.0",
+      "1000.0, 250.0, 750.0",
+      "500.0, 100.0, 400.0",
+      "300.0, 300.0, 0.0"
+  })
+  @DisplayName("withdraw testi")
+  public void testWithdrawWithCsv(double startBalance, double withdrawAmount, double expectedBalance) {
+    account.deposit(startBalance);
+    account.withdraw(withdrawAmount);
+    assertEquals(expectedBalance, account.getBalance());
+  }
+
+
+  @RepeatedTest(value = 3)
+  @DisplayName("Faiz hesablamasını 3 dəfə test edir")
+  public void testCalculation(RepetitionInfo repetitionInfo) {
+    account.deposit(1000);
+    double faiz = account.calculateMonthlyInterest();
+    assertEquals(20.0, faiz);
+    System.out.println("Tekrar: "+repetitionInfo.getCurrentRepetition());
   }
 
   @AfterEach
