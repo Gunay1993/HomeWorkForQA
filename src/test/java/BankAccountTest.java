@@ -22,11 +22,13 @@ public class BankAccountTest {
     assertEquals(100,account.getBalance());
   }
  @BeforeEach
+ @DisplayName("her test islemezden evvel yeni obyekt yaradir")
   public void crateobyekt() {
  account =new BankAccount("12345", "Əli Məmmədov");
 
   }
 @Test
+@DisplayName("balans emeliyyati")
   public void testWithdraw() {
 account.deposit(200);
 account.withdraw(50);
@@ -34,27 +36,32 @@ assertEquals(150, account.getBalance());
   }
 
   @AfterEach
+  @DisplayName("her testden sora obyekti null edir")
   public void nullObyekt() {
    account=null;
     System.out.println("Test tamamlandı-obykti null edir (after each)");
 
   }
   @Test
+  @DisplayName("Balansin 0 oldugunu yoxluyur")
   public  void testGetBalance(){
     assertEquals(0, account.getBalance());
   }
   @Test
+  @DisplayName("hesab nomresini yoxluyur")
   public void testAccountNumber(){
    assertEquals("12345" , account.getAccountNumber());
   }
 
   @Test
+  @DisplayName("hesabin sahibini yoxluyur")
   public void testOwnerName(){
     assertEquals("Əli Məmmədov" , account.getOwnerName());
   }
 
 
   @AfterAll
+ @DisplayName("butun testler bitdikden sora icra olur")
   public static void close() {
     System.out.println("Bank sistemi bitdi-afterAll");
   }
